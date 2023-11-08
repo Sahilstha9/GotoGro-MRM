@@ -1,0 +1,14 @@
+name: JSDoc Action
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: JSDoc Action
+      uses: andstor/jsdoc-action@v1.2.1

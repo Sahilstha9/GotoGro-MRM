@@ -1,0 +1,35 @@
+{
+  "name": "goto-grocery-mrm",
+  "version": "1.0.0",
+  "description": "A member record management system for GoTo Grocery",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run prepare && concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "cd server && nodemon start",
+    "start:client": "cd client && npm start",
+    "prepare": "concurrently \"npm run prepare:server\" \"npm run prepare:client\"",
+    "prepare:server": "cd server && npm install",
+    "prepare:client": "cd client && npm install",
+    "build": "npm run prepare && npm run build:client",
+    "build:client": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanengelander/Goto-Grocery-MRM.git"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.19"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanengelander/Goto-Grocery-MRM/issues"
+  },
+  "homepage": "https://github.com/ethanengelander/Goto-Grocery-MRM#readme",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "react-csv": "^2.2.2"
+  }
+}
